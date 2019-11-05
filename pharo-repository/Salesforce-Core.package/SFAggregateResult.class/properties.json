@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "SFLead",
+	"name" : "SFAggregateResult",
 	"type" : "normal"
 }

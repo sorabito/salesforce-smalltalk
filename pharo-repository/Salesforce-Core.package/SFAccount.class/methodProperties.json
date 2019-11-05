@@ -1,7 +1,10 @@
 {
-	"class" : {
-		"modelName" : "QuentinPlessis 10/2/2017 11:57" },
 	"instance" : {
-		"contacts" : "QuentinPlessis 10/2/2017 17:20",
+		"name:" : "QuentinPlessis 10/2/2017 17:20",
 		"name" : "QuentinPlessis 10/2/2017 17:20",
-		"name:" : "QuentinPlessis 10/2/2017 17:20" } }
+		"contacts" : "QuentinPlessis 10/2/2017 17:20"
+	},
+	"class" : {
+		"modelName" : "QuentinPlessis 10/2/2017 11:57"
+	}
+}
