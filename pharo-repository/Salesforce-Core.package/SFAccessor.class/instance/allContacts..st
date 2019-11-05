@@ -1,3 +1,4 @@
 actions-contacts
 allContacts: fields
-	^ self selectObjectsFields: fields model: SFContact.
+	^ self retrieveObjectsByBlock: [ :offset | self selectObjectsFields: fields model: SFContact limit: self defaultRetrieveCount offset: offset ]
+		for: self countContact
