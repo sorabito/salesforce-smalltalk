@@ -1,3 +1,3 @@
 actions-accounts
 account: fields where: where
-	^(self accounts: fields where: where) firstOrNil
+	^ self firstOrNil: (self accounts: fields where: where)
