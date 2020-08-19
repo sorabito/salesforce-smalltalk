@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "BaselineOf",
 	"category" : "BaselineOfSalesforce",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "BaselineOfSalesforce",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
