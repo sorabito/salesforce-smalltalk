@@ -1,9 +1,7 @@
 actions
 objectsFromQuery: query
-	| rawResult done rawRecords |
-	
+	| rawResult rawRecords |
 	rawResult := self rawQuery: query.
-	done := rawResult at: #done ifAbsent: [ false ].
 	
 	rawRecords := rawResult at: #records ifAbsent: [ {  } ].
 	

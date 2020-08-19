@@ -1,5 +1,5 @@
 actions
-selectModel: model fields: fields nestedModels: nestedModel nestedFields: nestedFields where: where
+selectModel: model fields: fields nestedModels: nestedModel nestedFields: nestedFields limit: limit offsetId: offsetId
 	| allFields subQuery |
 	
 	allFields := OrderedCollection new.
@@ -11,4 +11,4 @@ selectModel: model fields: fields nestedModels: nestedModel nestedFields: nested
 	].
 	allFields add: subQuery.
 
-	^ self selectObjectsFields: allFields model: model where: where.
+	^ self selectObjectsFields: allFields model: model limit: limit offsetId: offsetId.
