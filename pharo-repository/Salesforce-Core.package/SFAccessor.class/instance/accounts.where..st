@@ -1,4 +1,3 @@
 actions-accounts
 accounts: fields where: where
-	^ self retrieveObjectsByBlock: [ :offset | self selectObjectsFields: fields model: SFAccount where: where limit: self defaultRetrieveCount offset: offset ]
-		for: (self countAccountWhere: where)
+	^ self retrieveObjectsByBlock: [ :offsetId | self selectObjectsFields: fields model: SFAccount where: where limit: self defaultRetrieveCount offsetId: offsetId ]
