@@ -12,4 +12,4 @@ value
 
 	exception := self defaultExceptionClass new.
 	exception properties: result.
-	exception signal.
+	exception signal: self response statusLine asString.
