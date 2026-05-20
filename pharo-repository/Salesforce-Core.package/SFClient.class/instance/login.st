@@ -1,16 +1,17 @@
 actions
 login
-	| loginXml entity uri request |
-	loginXml := self soapAPILoginXmlTemplate 
-		format: {self settings username. self settings password. self settings securityToken.}.
-	entity := ZnEntity with: loginXml type: ZnMimeType textXML.
-
-	uri := self soapAPILoginUri.
-	request := self createRequest.
+	| entity uri request |
+	entity := ZnApplicationFormUrlEncodedEntity new.
+	entity at: 'grant_type' put: 'password'.
+	entity at: 'client_id' put: self settings clientId.
+	entity at: 'client_secret' put: self settings clientSecret.
+	entity at: 'username' put: self settings username.
+	entity at: 'password' put: self settings password , self settings securityToken.
+	uri := self oauthTokenUri.
+	request := ZnRequest empty.
 	request method: #POST.
 	request url: uri.
 	request entity: entity.
-	request headers headers at: 'SOAPAction' put: 'login'.
 	self client request: request.
 	self client execute.
-	self readFromLoginResponse: self client response.
+	self readFromOAuthLoginResponse: self client response.
